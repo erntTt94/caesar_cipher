@@ -24,7 +24,7 @@ Decoding reverses the shift to recover the original text.
 Run the script:
 
 ```bash
-python main.py
+python caesar_cipher.py
 ```
 
 You will be prompted to:
@@ -45,3 +45,16 @@ Enter a number between 1 and 25: 3
 Enter a text: Hello World!
 Choose mode [e/d]: e
 Result: Khoor Zruog!
+
+
+Example in Python
+from caesar_cipher import caesar_cipher
+
+text = "Hello World!"
+key = 3
+
+encoded = caesar_cipher(text, key, encode=True)
+print(encoded)  # Khoor Zruog!
+
+decoded = caesar_cipher(encoded, key, encode=False)
+print(decoded)  # Hello World!
